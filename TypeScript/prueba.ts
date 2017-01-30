@@ -38,3 +38,24 @@ if (a === 7){
     console.log("Dentro del IF " + a + " - " + b);
 }
 console.log("Fuera del IF " + a + " - " + b);
+
+
+//Funciones y tipado
+
+function devuelveNumero(num:number):string{
+
+    return "Numero devuelto " + num;
+
+}
+
+function devuleveString(texto:string):number{
+    if (texto == "hola"){
+        var number = 19;
+    }else{
+        var number = 16;
+    }
+
+    return number;
+}
+
+alert(devuelveNumero(34) + devuleveString("hola"));
