@@ -7,6 +7,15 @@ class Coche{
     private _modelo : string;
     private _velocidad : number = 0;
 
+    constructor(modelo:any = null) {
+        this._color = "Blanco";
+        if (modelo == null){
+            this._modelo = "BMW Generic";
+        }else{
+            this._modelo = modelo;
+        }
+        this._velocidad = 0;
+    }
 
     get color(): string {
         return this._color;
@@ -41,9 +50,10 @@ class Coche{
     }
 }
 
-var coche =  new Coche();
+var coche =  new Coche("Tesla Model S");
 coche.acelerar();
 coche.acelerar();
 coche.acelerar();
 coche.frenar();
 console.log(coche.velocidad);
+console.log("El modelo del coche es: " + coche.modelo);
