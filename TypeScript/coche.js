@@ -1,6 +1,3 @@
-/**
- * Created by Arnau on 06/02/17.
- */
 var Coche = (function () {
     function Coche(modelo) {
         if (modelo === void 0) { modelo = null; }

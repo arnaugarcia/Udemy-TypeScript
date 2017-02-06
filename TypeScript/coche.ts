@@ -1,7 +1,12 @@
 /**
  * Created by Arnau on 06/02/17.
  */
-class Coche{
+interface CocheBase{
+    modelo:string;
+    velocidad:number;
+}
+
+class Coche implements CocheBase{
 
     private _color : string;
     private _modelo : string;
