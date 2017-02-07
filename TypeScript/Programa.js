@@ -56,3 +56,18 @@ editor.version = 1.0;
 editor.nombre = "Movie Maker";
 editor.timeline = 100;
 console.log(editor.allData());
+//Logica del programa
+var programas = [];
+function guardar() {
+    var nombre = document.getElementById("nombre").value.toString();
+    var programa = new Programa();
+    programa.nombre = nombre;
+    programa.version = 1.0;
+    programas.push(programa);
+    var list = "";
+    for (var i = 0; i < programas.length; i++) {
+        list = list + "<li>" + programas[i].nombre;
+    }
+    var listado = document.getElementById("listado");
+    listado.innerHTML = list;
+}
