@@ -9,7 +9,7 @@ interface CocheBase{
 class Coche implements CocheBase{
 
     private _color : string;
-    private _modelo : string;
+    private _modelo : string ;
     private _velocidad : number = 0;
 
     constructor(modelo:any = null) {
