@@ -6,6 +6,35 @@ var __extends = (this && this.__extends) || function (d, b) {
 /**
  * Created by Arnau on 07/02/17.
  */
+var Tienda;
+(function (Tienda) {
+    var Ropa = (function () {
+        function Ropa(titulo) {
+            this.titulo = titulo;
+            alert("Tienda de ropa" + titulo);
+        }
+        return Ropa;
+    }());
+    Tienda.Ropa = Ropa;
+    var Informatica = (function () {
+        function Informatica(titulo) {
+            this.titulo = titulo;
+            alert("Tienda de tecnología: " + titulo);
+        }
+        return Informatica;
+    }());
+    Tienda.Informatica = Informatica;
+})(Tienda || (Tienda = {}));
+var informatica = Tienda.Informatica;
+var cargarInformatica = new informatica("NeoByte");
+function arranque(lanzar) {
+    return function (target) {
+        target.prototype.lanzamiento = function () {
+            alert(lanzar);
+        };
+    };
+}
+;
 var Programa = (function () {
     function Programa() {
     }
@@ -31,6 +60,8 @@ var Programa = (function () {
     });
     return Programa;
 }());
+var programa = new Programa();
+programa.lanzamiento();
 var EditorVideo = (function (_super) {
     __extends(EditorVideo, _super);
     function EditorVideo() {

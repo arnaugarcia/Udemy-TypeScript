@@ -1,6 +1,32 @@
 /**
  * Created by Arnau on 07/02/17.
  */
+module Tienda{
+    export class Ropa{
+        constructor (public titulo:string){
+            alert("Tienda de ropa" + titulo);
+        }
+    }
+    export class Informatica{
+        constructor(public titulo:string){
+            alert("Tienda de tecnología: " + titulo)
+        }
+    }
+}
+
+import informatica = Tienda.Informatica;
+
+let cargarInformatica = new informatica("NeoByte");
+
+function arranque(lanzar: string){
+        return function(target: Function){
+            target.prototype.lanzamiento = function(): void{
+                alert(lanzar);
+            }
+        }
+}
+
+@arranque("Comienzo del programa");
 class Programa{
     private _nombre: string;
     private _version: number;
@@ -21,6 +47,10 @@ class Programa{
         this._version = value;
     }
 }
+
+var programa = new Programa();
+
+programa.lanzamiento();
 
 class EditorVideo extends Programa{
     private _timeline:number;
